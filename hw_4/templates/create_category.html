@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Обучение программированию на Python
+{% endblock %}
+
+{% block css %}
+    {% include 'includes/inc_style.html' %}
+{% endblock %}
+
+{% block menu %}
+    {% include 'includes/inc_menu.html' %}
+{% endblock %}
+
+{% block body %}
+    <h1>Создание категории</h1>
+    <form method="post">
+        <label>
+            <input type="text" name="name" placeholder="Название">
+        </label>
+        <button type="submit">Сохранить и вернуться на главную</button>
+    </form>
+{% endblock %}

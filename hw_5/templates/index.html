@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Обучение программированию на Python
+{% endblock %}
+
+{% block css %}
+    {% include "includes/inc_style.html" %}
+{% endblock %}
+
+{% block menu %}
+    {% include "includes/inc_menu.html" %}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <a href="/create-category/">Создать категорию</a>
+    </div>
+    <div>
+        <h1>Список категорий</h1>
+        {% for item in objects_list %}
+            <li>
+                {{ item }}
+                {{ item.name }} <span>Количество курсов: {{ item.course_count() }}</span>
+                <a href="/courses/?id={{ item.id }}">Показать курсы</a>
+            </li>
+        {% endfor %}
+    </div>
+{% endblock %}
