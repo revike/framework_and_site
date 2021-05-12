@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Создание курса
+{% endblock %}
+
+{% block css %}
+    {% include 'includes/inc_style.html' %}
+{% endblock %}
+
+{% block body %}
+    <div>
+        <a href="/courses/?id={{ id }}">назад</a>
+    </div>
+
+    <br>
+    <br>
+
+    <div>
+        <h1>Создание курса для категории {{ name }}</h1>
+        <form method="post">
+            <label>
+                <input type="text" name="name" placeholder="Название">
+            </label>
+            <button type="submit">Сохранить и вернуться к списку курсов</button>
+        </form>
+    </div>
+{% endblock %}
